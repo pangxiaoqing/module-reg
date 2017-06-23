@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>reg/replace</title>
+</head>
+<body>
+	<div id="box">在 GitHub 上最受关注的项目有哪些呢？
+
+JQuery 的名声够大了，但排名第 6，D3 却排名第 5。
+
+如何学习和使用 D3
+以下是几个学习 D3 的站点：
+
+官方网站
+</div>
+	<!--<form action="demo_form.php" method="post">
+		<input type="text" name="fname" required>
+		<input type="submit" value="提交">
+	</form>-->
+<script type="text/javascript" src="jquery-3.2.0.min.js"></script>
+<script type="text/javascript">
+	var box = $("#box").html();
+	console.log(box);
+	document.write(box.replace(/D3/g,"我被替换了"));
+
+	var str = "<font color='red'>名声</font>";
+	document.write(box.replace(/名声/g, str));
+
+	var aa = document.getElementById("box");
+	aa.style.backgroundColor="blue";
+	// aa.css("color","blue");
+	// document.write(aa);
+</script>
+</body>
+</html>
